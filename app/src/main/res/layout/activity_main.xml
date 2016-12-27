@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.randy.herome.MainActivity.MainActivity">
+
+    <android.support.v7.widget.Toolbar android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#253748"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:src = "@drawable/top_banner_bar"
+            android:layout_width="match_parent"
+            android:cropToPadding="false"
+            android:layout_weight="1.03"
+            android:layout_marginLeft="0dp"
+            android:layout_margin="0dp"
+            android:layout_marginRight="0dp"
+            android:paddingRight="15dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmant_container"
+        tools:context="com.example.randy.herome.MainActivity.MainActivity">
+
+    </FrameLayout>
+</LinearLayout>
