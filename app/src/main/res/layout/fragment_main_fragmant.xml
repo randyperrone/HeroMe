@@ -13,6 +13,16 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <TextView
+            android:text="How Did You Get Your Powers?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:elevation="1dp"
+            android:textColor="#FAC740"
+            android:textSize="22sp"
+            android:gravity="center" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,6 +66,7 @@
             android:drawableLeft="@drawable/rocket"
             android:paddingLeft="10dp"
             android:paddingRight="10dp" />
+
         <Button
             android:text="Choose Powers"
             android:layout_height="wrap_content"
