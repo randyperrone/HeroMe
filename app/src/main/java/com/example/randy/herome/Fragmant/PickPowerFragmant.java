@@ -124,24 +124,35 @@ public class PickPowerFragmant extends Fragment implements View.OnClickListener{
 
         if(btn == turtleBtn){
             leftBtnImage = R.drawable.turtle_power;
+            setPower("Turtle Power", leftBtnImage);
         }
         else if(btn == lighningBtn){
             leftBtnImage = R.drawable.thors_hammer;
+            setPower("Lightning", leftBtnImage);
         }
         else if(btn == flightBtn){
             leftBtnImage = R.drawable.super_man_crest;
+            setPower("Flight", leftBtnImage);
         }
         else if(btn == webBtn){
             leftBtnImage = R.drawable.spider_web;
+            setPower("Web Slinging", leftBtnImage);
         }
         else if(btn == laserBtn){
             leftBtnImage = R.drawable.laser_vision;
+            setPower("Laser Vision", leftBtnImage);
         }
         else if(btn == superStrengthBtn){
             leftBtnImage = R.drawable.super_strength;
+            setPower("Super Strength", leftBtnImage);
         }
         
         btn.setCompoundDrawablesWithIntrinsicBounds(leftBtnImage,0,R.drawable.item_selected,0);
+    }
+
+    private void setPower(String power, int image){
+        MainActivity mainActivity = (MainActivity)getActivity();
+        mainActivity.setPowerType(power, image);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

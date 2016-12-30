@@ -111,14 +111,22 @@ public class MainFragmant extends Fragment implements View.OnClickListener{
         int leftBtn = 0;
         if(btn == accidentBtn){
             leftBtn = R.drawable.lightning;
+            setPower("Came By Accident", leftBtn);
         }
         else if(btn == mutationBtn){
             leftBtn = R.drawable.atomic;
+            setPower("Genetic Mutation", leftBtn);
         }
         else if(btn == bornBtn){
             leftBtn = R.drawable.rocket;
+            setPower("Born With Them", leftBtn);
         }
         btn.setCompoundDrawablesWithIntrinsicBounds(leftBtn,0,R.drawable.item_selected,0);
+    }
+
+    private void setPower(String power, int image){
+        MainActivity mainActivity = (MainActivity)getActivity();
+        mainActivity.setGotPower(power, image);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

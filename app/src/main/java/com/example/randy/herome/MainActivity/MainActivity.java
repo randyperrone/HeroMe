@@ -13,6 +13,11 @@ import com.example.randy.herome.R;
 
 public class MainActivity extends AppCompatActivity implements MainFragmant.OnFragmentInteractionListener, PickPowerFragmant.OnFragmentInteractionListener, CharacterBioFragment.OnFragmentInteractionListener{
 
+    private String gotPower;
+    private int gotPowerImage;
+    private String pickPower;
+    private int pickPowerImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,32 @@ public class MainActivity extends AppCompatActivity implements MainFragmant.OnFr
 
         CharacterBioFragment fragment = new CharacterBioFragment();
         this.getSupportFragmentManager().beginTransaction().replace(R.id.fragmant_container, fragment).addToBackStack(null).commit();
+    }
+
+    public void setGotPower(String power, int image){
+        gotPower = power;
+        gotPowerImage = image;
+    }
+
+    public String getGotPower(){
+        return gotPower;
+    }
+
+    public int getGotPowerImage(){
+        return gotPowerImage;
+    }
+
+    public void setPowerType(String power, int image){
+        pickPower = power;
+        pickPowerImage = image;
+    }
+
+    public String getPowerType(){
+        return pickPower;
+    }
+
+    public int getPickPowerImage(){
+        return pickPowerImage;
     }
 
     @Override
